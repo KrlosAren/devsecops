@@ -52,7 +52,7 @@ pipeline {
           }
           steps {
             // "sonarqube" is the server configured in "Configure System"
-            withSonarQubeEnv('My SonarQube Server') {
+            withSonarQubeEnv('sonar-scanner') {
               // Execute the SonarQube scanner with desired flags
               sh "${scannerHome}/bin/sonar-scanner \
                           -Dsonar.projectKey=SimpleExpressExample:Test \
